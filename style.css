@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    color: #c92b2b;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    width: 100%;
+    background: #da782d;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+}
+
+.logo img {
+    width: 180px;
+    height: auto;
+    display: block;
+}
+
+.logo img {
+    width: 140px;
+    height: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    transition: .3s;
+}
+
+.nav-links li a:hover {
+    color: #38bdf8;
+}
+
+.hero {
+    height: 90vh;
+    background: url("imagesbanner.jpg") no-repeat center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(127, 163, 19, 0.632);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+    color: #fff;
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #0a1e49;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+}
+
+.search-section {
+    background: #fff;
+    margin-top: -60px;
+    position: relative;
+    z-index: 100;
+    border-radius: 15px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .15);
+}
+
+.search-section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.search-form input,
+.search-form select {
+    width: 250px;
+    padding: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.search-form button {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    padding: 14px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.search-form button:hover {
+    background: #1d4ed8;
+}
+
+.featured {
+    padding: 80px 0;
+}
+
+.featured h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 38px;
+}
+
+.property-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.property-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .12);
+    transition: .4s;
+}
+
+.property-card:hover {
+    transform: translateY(-10px);
+}
+
+.property-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.property-content {
+    padding: 20px;
+}
+
+.property-content h3 {
+    margin-bottom: 10px;
+    color: #0f172a;
+}
+
+.property-content p {
+    color: #695c5c;
+    margin-bottom: 15px;
+}
+
+.property-content h4 {
+    color: #2563eb;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.property-content ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.property-content ul li {
+    background: #eef2ff;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.card-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background: #5075cc;
+    color: #fff;
+    padding: 12px;
+    border-radius: 8px;
+    transition: .3s;
+}
+
+.card-btn:hover {
+    background: #2563eb;
+}
+
+@media(max-width:992px) {
+    .navbar {
+        flex-direction: column;
+    }
+    .nav-links {
+        margin-top: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-links li {
+        margin: 10px;
+    }
+    .hero-content h1 {
+        font-size: 42px;
+    }
+    .hero-content p {
+        font-size: 18px;
+    }
+}
+
+@media(max-width:768px) {
+    .hero {
+        height: 70vh;
+    }
+    .hero-content h1 {
+        font-size: 34px;
+    }
+    .hero-content p {
+        font-size: 16px;
+    }
+    .search-section {
+        margin-top: 20px;
+        border-radius: 0;
+        width: 100%;
+    }
+    .search-form input,
+    .search-form select,
+    .search-form button {
+        width: 100%;
+    }
+}
